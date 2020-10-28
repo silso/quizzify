@@ -21,11 +21,16 @@
   "homepage": "https://github.com/Leaxe/ledger#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "gulp-install": "^1.1.0",
     "pug": "^2.0.4"
   },
   "nodemonConfig": {
     "ignore": [
       "*.json"
     ]
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1"
   }
 }
