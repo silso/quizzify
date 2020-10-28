@@ -1,0 +1,19 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand(href='#')
+    img.mr-2(src='' width='30' height='30' alt='')
+    |Quizzify
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link(href='#') Link1
+      li.nav-item
+        a.nav-link(href='#') Link2
+      li.nav-item
+        a.nav-link(href='#') Link3
+    ul.navbar-nav.ml-auto
+      // <button class="btn btn-primary my-2 my-sm-0" id="returnbtn" style="display: none" type="button"><span class="fas fa-chevron-left"></span> Return to Review Page</button>
+      a.mr-2.nav-link(href='logout')
+        |Logout 
+        span.fas.fa-sign-out-alt

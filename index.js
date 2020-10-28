@@ -3,11 +3,14 @@ const app = express();
 const port = process.env.PORT || 3000;;
 
 //init pug
-app.set('views', './views');
-app.set('view engine', 'pug');
+// NOTE: using gulp so no rendering, just serving static files
+// app.set('views', './views');
+// app.set('view engine', 'pug');
 
-app.get('/', function(req, res) {
-  res.render('index');
- });
+app.use(express.static('build'));
 
-app.listen(port, () => console.log(`Ledger listening on port ${port}!`));
+// app.get('/', function(req, res) {
+//   res.sendFile('./views/index.html');
+// });
+
+app.listen(port, () => console.log(`Quizzify listening on port ${port}!`));

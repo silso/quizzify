@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    z-index: 1;
+}
+#errorindicator{
+    color: red;
+    text-align: center;
+}
+.btn-labeled {padding-top: 0;padding-bottom: 0;}
+.btn {
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+.fit{
+    max-height:85vh;
+    width:auto;
+}
+.wrapper{
+    align-items: stretch;
+    width: 100%;
+}
+#sidepanel{
+    min-width: 400px;
+    max-width: 400px;
+    /* min-height: 100vh; */
+    max-height: calc(100vh - 5em);
+    overflow-y: auto;
+}
+#sidepanel.active {
+    margin-left: -400px;
+}
+#contentpanel{
+    width: calc(100vw - 410px);
+    margin-left: 1em;
+    max-height: calc(100vh - 5em);
+    overflow-x: auto;
+    overflow-y: auto;
+    z-index: 2;
+}
+#contentpanel.active{
+    width: calc(100vw - 10px);
+}
+#myTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    min-width: 100%;
+}
+
+#myTable thead, #myTable th {
+    text-align: center !important;
+}
+
+#myTable td, #myTable th {
+    text-align: center !important;
+    border: 1px solid #ddd;
+    padding: 8px;
+    /* position: relative;
+    overflow: hidden; */
+    height: .5em;
+    white-space: nowrap;
+}
+
+/* .form-control{
+    text-align: center;
+} */
+
+#myTable tr:nth-child(even){background-color: rgb(230, 230, 230);}
+
+#myTable tr:hover {background-color: #868282;}
+
+#myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: rgb(81, 175, 77);
+    color: white;
+}
+mark{
+    background: orange;
+    color: black;
+}
+/* .demoarea{
+    padding:20px;
+    z-index: 7;
+} */
+
+.top-buffer { margin-top:20px; }
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+a.custom-card {
+    color: inherit;
+}
