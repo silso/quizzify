@@ -1,7 +1,13 @@
-* {
+/* new stuff */
+#navSearch:focus::placeholder {
+    color:transparent;
+}
+
+/*************/
+/** {
     padding: 0;
     margin: 0;
-}
+}*/
 body{
     width: 100%;
     z-index: 1;

@@ -1,19 +1,17 @@
-nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-  a.navbar-brand(href='#')
-    img.mr-2(src='' width='30' height='30' alt='')
-    |Quizzify
-  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-    span.navbar-toggler-icon
-  #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.mr-auto
-      li.nav-item
-        a.nav-link(href='#') Link1
-      li.nav-item
-        a.nav-link(href='#') Link2
-      li.nav-item
-        a.nav-link(href='#') Link3
-    ul.navbar-nav.ml-auto
-      // <button class="btn btn-primary my-2 my-sm-0" id="returnbtn" style="display: none" type="button"><span class="fas fa-chevron-left"></span> Return to Review Page</button>
-      a.mr-2.nav-link(href='logout')
-        |Logout 
-        span.fas.fa-sign-out-alt
+nav.navbar.navbar-dark.bg-dark
+    a.navbar-brand(href='#')
+        img.mr-2.d-inline-block.align-top(src='img/letter_q_PNG21.png' width='30' height='30' alt='logo' style='filter: invert(100%)')
+        |Quizzify
+    form.mr-2
+        input#navSearch.form-control.form-control-lg(type='text' placeholder='Search...')
+    .dropdown.navbar-right
+        button#dropdownMenuButton.btn.btn-secondary.mb-2(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            span.mr-2.align-text-top John Doe
+            img.d-inline-block(src='img/empty_profile.png' width='30' height='30' alt='logo' style='filter: invert(100%)')
+        .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton' style='top:89%')
+            a.dropdown-item(href='#') Help
+            a.dropdown-item(href='#') Settings
+            .dropdown-divider
+            a.dropdown-item.mr-2(href='logout')
+                |Logout 
+                span.fas.fa-sign-out-alt
