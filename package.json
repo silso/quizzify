@@ -20,11 +20,12 @@
   },
   "homepage": "https://github.com/Leaxe/ledger#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "pug": "^2.0.4"
   },
   "nodemonConfig": {
-    "ignore": ["*.json"]
+    "ignore": [
+      "*.json"
+    ]
   }
 }
