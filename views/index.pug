@@ -3,81 +3,73 @@ head
   title Home
   include head
 include navbar
-.d-flex
-  #sidepanel
-    .card.bg-light
-      .card-body
-        h4.card-title Review
-        h6
-          b Friend List
-        button#selectallbtn.btn.btn-secondary.btn-sm.btn-block(type='button') Select All
-        button#restorebtn.btn.btn-secondary.btn-sm.btn-block(type='button') Restore
-    .card.bg-light
-      .card-body
-        h4.card-title Download
-  #contentpanel
-    nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarfortable' aria-controls='navbarfortable' aria-expanded='false' aria-label='Toggle navigation')
-        span.navbar-toggler-icon
-      #navbarfortable.collapse.navbar-collapse
-        ul.navbar-nav.mr-auto
-          span.navbar-text
-          li.nav-item
-            select#row_selector.custom-select.mr-sm-2
-              option(selected='' value='10') 10
-              option(value='25') 25
-              option(value='50') 50
-              option(value='100') 100
-        form.form-inline.my-2.my-lg-0
-          input#searcharea.form-control.mr-sm-2(type='search' placeholder='Filter' aria-label='Filter')
-          button#searchbtn.btn.btn-outline-success.my-2.my-sm-0(type='button' onclick='formsearch()') Filter
-          button#canclebtn.btn.btn-outline-danger.my-2.my-sm-0(style='margin-left: 0.5em' disabled='' type='button') Cancle
-    .container(style='text-align: center')
-      #row1.row.top-buffer
-        a.custom-card.col(href='/Geography')
-          div
-            .card(style='width: 15rem;')
-              img.card-img-top(src='img/geography.jpeg' alt='Card image cap')
-              h6 Geography
-        a.custom-card.col(href='/Math')
-          div
-            .card(style='width: 15rem;')
-              img.card-img-top(src='img/math.jpeg' alt='Card image cap')
-              h6 Math
-        a.custom-card.col(href='/Physics')
-          div
-            .card(style='width: 15rem;')
-              img.card-img-top(src='img/physics.jpeg' alt='Card image cap')
-              h6 Physics
-      #row2.row.top-buffer
-        a.custom-card.col(href='A.I.')
-          div
-            .card(style='width: 15rem;')
-              img.card-img-top(src='img/AI.png' alt='Card image cap')
-              h6 A.I.
-        a.custom-card.col(href='/Virtual Reality')
-          div
-            .card(style='width: 15rem;')
-              img.card-img-top(src='img/VR.jpeg' alt='Card image cap')
-              h6 Virtual Reality
-        a.custom-card.col(href='/Biology')
-          div
-            .card(style='width: 15rem;')
-              img.card-img-top(src='img/biology.jpeg' alt='Card image cap')
-              h6 Biology
-      #row3.row.top-buffer
-        a.custom-card.col(href='Trivia')
-          div
-            .card(style='width: 15rem;')
-              img.card-img-top(src='img/trivia.jpeg' alt='Card image cap')
-              h6 Trivia
-        a.custom-card.col(href='/Pokemon')
-          div
-            .card(style='width: 15rem;')
-              img.card-img-top(src='img/pokemon.png' alt='Card image cap')
-              h6 Pokemon
-        a.custom-card.col(href='/Star Wars')
-          div
-            .card(style='width: 15rem;')
-              img.card-img-top(src='img/Starwar.jpeg' alt='Card image cap')
-              h6 Star Wars
+.container-fluid
+  .row
+    .col-sm-4.col-lg-3.d-md-block.p-3#sidepanel
+      include sidebar
+    .col#contentpanel
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarfortable' aria-controls='navbarfortable' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarfortable.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            span.navbar-text
+            li.nav-item
+              select#row_selector.custom-select.mr-sm-2
+                option(selected='' value='10') 10
+                option(value='25') 25
+                option(value='50') 50
+                option(value='100') 100
+          form.form-inline.my-2.my-lg-0
+            input#searcharea.form-control.mr-sm-2(type='search' placeholder='Filter' aria-label='Filter')
+            button#searchbtn.btn.btn-outline-success.my-2.my-sm-0(type='button' onclick='formsearch()') Filter
+            button#canclebtn.btn.btn-outline-danger.my-2.my-sm-0(style='margin-left: 0.5em' disabled='' type='button') Cancel
+      .container(style='text-align: center')
+        #row1.row.top-buffer.mb-3
+          a.custom-card.col(href='/Geography')
+            div
+              .card(style='width: 15rem;')
+                img.card-img-top(src='img/geography.jpeg' alt='Card image cap')
+                h6 Geography
+          a.custom-card.col(href='/Math')
+            div
+              .card(style='width: 15rem;')
+                img.card-img-top(src='img/math.jpeg' alt='Card image cap')
+                h6 Math
+          a.custom-card.col(href='/Physics')
+            div
+              .card(style='width: 15rem;')
+                img.card-img-top(src='img/physics.jpeg' alt='Card image cap')
+                h6 Physics
+        #row2.row.top-buffer.mb-3
+          a.custom-card.col(href='A.I.')
+            div
+              .card(style='width: 15rem;')
+                img.card-img-top(src='img/AI.png' alt='Card image cap')
+                h6 A.I.
+          a.custom-card.col(href='/Virtual Reality')
+            div
+              .card(style='width: 15rem;')
+                img.card-img-top(src='img/VR.jpeg' alt='Card image cap')
+                h6 Virtual Reality
+          a.custom-card.col(href='/Biology')
+            div
+              .card(style='width: 15rem;')
+                img.card-img-top(src='img/biology.jpeg' alt='Card image cap')
+                h6 Biology
+        #row3.row.top-buffer
+          a.custom-card.col(href='Trivia')
+            div
+              .card(style='width: 15rem;')
+                img.card-img-top(src='img/trivia.jpeg' alt='Card image cap')
+                h6 Trivia
+          a.custom-card.col(href='/Pokemon')
+            div
+              .card(style='width: 15rem;')
+                img.card-img-top(src='img/pokemon.png' alt='Card image cap')
+                h6 Pokemon
+          a.custom-card.col(href='/Star Wars')
+            div
+              .card(style='width: 15rem;')
+                img.card-img-top(src='img/Starwar.jpeg' alt='Card image cap')
+                h6 Star Wars
