@@ -8,6 +8,13 @@ head
   link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
   link(rel='stylesheet' type='text/css' href='/css/style.css')
   script(src='https://kit.fontawesome.com/1e74007db0.js')
+  style.
+    .card:hover{
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    }
+    //- .card{background-color: rgba(255, 0, 0, 0.2);}
 include navbar
 .d-flex
   #sidepanel
@@ -34,18 +41,60 @@ include navbar
               option(value='25') 25
               option(value='50') 50
               option(value='100') 100
-          ul#pagination.pagination
-          span#errorindicator.navbar-text(style='display: none')
-            p No record found under current condition.
         form.form-inline.my-2.my-lg-0
-          input#searcharea.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
-          button#searchbtn.btn.btn-outline-success.my-2.my-sm-0(type='button' onclick='formsearch()') Search
+          input#searcharea.form-control.mr-sm-2(type='search' placeholder='Filter' aria-label='Filter')
+          button#searchbtn.btn.btn-outline-success.my-2.my-sm-0(type='button' onclick='formsearch()') Filter
           button#canclebtn.btn.btn-outline-danger.my-2.my-sm-0(style='margin-left: 0.5em' disabled='' type='button') Cancle
-    table#myTable
-      thead
-      tbody
-      tfoot
-#drivepage(style='display: none; width: 100%; height: calc(100vh - 4em);')
+    .container(style='text-align: center')
+      #row1.row.top-buffer
+        a.custom-card.col(href='/Geography')
+          div
+            .card(style='width: 15rem;')
+              img.card-img-top(src='img/geography.jpeg' alt='Card image cap')
+              h6 Geography
+        a.custom-card.col(href='/Math')
+          div
+            .card(style='width: 15rem;')
+              img.card-img-top(src='img/math.jpeg' alt='Card image cap')
+              h6 Math
+        a.custom-card.col(href='/Physics')
+          div
+            .card(style='width: 15rem;')
+              img.card-img-top(src='img/physics.jpeg' alt='Card image cap')
+              h6 Physics
+      #row2.row.top-buffer
+        a.custom-card.col(href='A.I.')
+          div
+            .card(style='width: 15rem;')
+              img.card-img-top(src='img/AI.png' alt='Card image cap')
+              h6 A.I.
+        a.custom-card.col(href='/Virtual Reality')
+          div
+            .card(style='width: 15rem;')
+              img.card-img-top(src='img/VR.jpeg' alt='Card image cap')
+              h6 Virtual Reality
+        a.custom-card.col(href='/Biology')
+          div
+            .card(style='width: 15rem;')
+              img.card-img-top(src='img/biology.jpeg' alt='Card image cap')
+              h6 Biology
+      #row3.row.top-buffer
+        a.custom-card.col(href='Trivia')
+          div
+            .card(style='width: 15rem;')
+              img.card-img-top(src='img/trivia.jpeg' alt='Card image cap')
+              h6 Trivia
+        a.custom-card.col(href='/Pokemon')
+          div
+            .card(style='width: 15rem;')
+              img.card-img-top(src='img/pokemon.png' alt='Card image cap')
+              h6 Pokemon
+        a.custom-card.col(href='/Star Wars')
+          div
+            .card(style='width: 15rem;')
+              img.card-img-top(src='img/Starwar.jpeg' alt='Card image cap')
+              h6 Star Wars
+
 script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
 script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
