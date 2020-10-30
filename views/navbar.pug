@@ -1,17 +1,19 @@
 nav.navbar.navbar-dark.bg-dark
-    a.navbar-brand(href='#')
-        img.mr-2.d-inline-block.align-top(src='img/letter_q_PNG21.png' width='30' height='30' alt='logo' style='filter: invert(100%)')
-        |Quizzify
-    form.mr-2
-        input#navSearch.form-control.form-control-lg(type='text' placeholder='Search...')
-    .dropdown.navbar-right
+    .navbar-header
+        a.navbar-brand(href='/')
+            img.mr-2.d-inline-block.align-top(src='img/letter_q_PNG21.png' width='30' height='30' alt='logo' style='filter: invert(100%)')
+            |Quizzify
+        form.d-inline-block
+            input#navSearch.form-control.form-control-sm(type='text' placeholder='Search...')
+    .dropdown
         button#dropdownMenuButton.btn.btn-secondary.mb-2(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
             span.mr-2.align-text-top John Doe
             img.d-inline-block(src='img/empty_profile.png' width='30' height='30' alt='logo' style='filter: invert(100%)')
         .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuButton' style='top:89%')
-            a.dropdown-item(href='#') Help
-            a.dropdown-item(href='#') Settings
+            a.dropdown-item(href='/profile.html') Profile
+            a.dropdown-item(href='/help.html') Help
+            a.dropdown-item(href='/settings.html') Settings
             .dropdown-divider
-            a.dropdown-item.mr-2(href='logout')
+            a.dropdown-item.mr-2(href='/logout')
                 |Logout 
                 span.fas.fa-sign-out-alt
