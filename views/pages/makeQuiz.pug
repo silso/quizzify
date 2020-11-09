@@ -1,0 +1,14 @@
+extends ../src/layoutMain.pug
+
+block head
+  title Make quiz - Quizzify
+  link(rel='stylesheet' type='text/css' href='/css/jsuites.css')
+  link(rel='stylesheet' type='text/css' href='/css/jexcel.css')
+
+block scripts
+  script(src='/js/jexcel.js')
+  script(src='/js/jsuites.js')
+  script(src='/js/makeQuiz.js')
+
+block content
+  #my-spreadsheet
