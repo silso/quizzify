@@ -1,0 +1,73 @@
+extends ../src/layoutMain.pug
+
+block head
+  title Make quiz - Quizzify
+  link(rel='stylesheet' type='text/css' href='/css/jsuites.css')
+  link(rel='stylesheet' type='text/css' href='/css/jexcel.css')
+  link(rel='stylesheet' type='text/css' href='/css/jexcel.theme.css')
+
+block scripts
+  script(src='/js/jexcel.js')
+  script(src='/js/jsuites.js')
+  script(src='/js/make-quiz.js')
+
+block content
+  .container
+    //title of quiz
+    .jumbotron.pb-3
+      .row
+        .col.col-lg-4
+          input.form-control.form-control-lg(type='text' value='Quiz name')
+        .col.d-flex.align-items-end
+          h6.d-inline-block.mr-2.mb-1 by
+          h3.d-inline-block.mb-0 John Doe
+
+    //preset selection
+    .row.mb-3
+      .col-10.col-sm-8.col-md-6.col-lg-4
+        .input-group
+          .input-group-prepend
+            label.input-group-text(for='presetSelect') Preset
+          select#presetSelect.custom-select(name='presetSelect')
+            option Flashcard
+            option Multiple choice
+            option Geography
+            option Image
+      .col.d-flex.justify-content-end
+        img#settingsButton.align-self-center(src='/svg/gear-fill.svg' width='32' height='32' role='button'
+          data-toggle='modal' data-target='#settingsModal')
+
+    //data input
+    .row.mb-2
+      .col
+        #spreadsheetContainer
+          #quizDataSpreadsheet
+
+    .row
+      .col
+        .custom-file
+          input#coverImage.custom-file-input(type='file')
+          label.custom-file-label(for='coverImage') Choose cover image...
+      .col
+        button.btn.btn-secondary.float-right Import data
+          img.ml-2.align-baseline(src='/svg/upload.svg' style='filter: invert(1);')
+
+
+
+    //settings modal
+    #settingsModal.modal.fade(tabindex='-1' aria-labelledby='modalTitle' aria-hidden='true')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            h5#modalTitle.modal-title Adjust settings
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              span(aria-hidden='true') &times;
+
+    //column settings modal
+    #colSettingsModal.modal.fade(tabindex='-1' aria-labelledby='modalTitle' aria-hidden='true')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            h5#modalTitle.modal-title Adjust settings
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              span(aria-hidden='true') &times;
