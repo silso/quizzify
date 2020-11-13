@@ -13,4 +13,8 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/build/index.html');
 });
 
+app.get('/login', function(req, res) {
+  res.sendFile(__dirname + '/build/login.html');
+});
+
 app.listen(port, () => console.log(`Quizzify listening on port ${port}!`));
