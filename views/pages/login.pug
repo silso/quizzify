@@ -11,30 +11,18 @@ head
   script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
 
   script(src='https://kit.fontawesome.com/1e74007db0.js')
-
-  style.
-    .form-control{
-    text-align: center;
-    }
-
-  block head
-  link(rel='stylesheet' type='text/css' href='/css/style.css')
+  link(rel='stylesheet' type='text/css' href='/css/login.css')
 
 
-.jumbotron(style='background: rgb(166, 166, 166) !important')
-    center
-        h1 Quizzify Login
-
-    p#errorindicator
-form
-    .row
-        .form-group.col-md-4.offset-md-4
-            label(for='GID') Enter your GID here:
-            input#GID.form-control(type='text' placeholder='Enter Username' required='')
-    .row
-        .form-group.col-md-4.offset-md-4
-            label(for='password') Enter Password here:
-            input#password.form-control(type='password' placeholder='Enter Password' required='')
-    .row
-        .form-group.col-md-4.offset-md-4
-            button.btn.btn-success.btn-block(type='button') Login
+form.form-signin
+  img.mb-4(src='img/letter_q_PNG21.png' alt='' width='72' height='72')
+  h1.h3.mb-3.font-weight-normal Please sign in
+  label.sr-only(for='inputEmail') Email address
+  input#inputEmail.form-control(type='email' placeholder='Email address' required='' autofocus='')
+  label.sr-only(for='inputPassword') Password
+  input#inputPassword.form-control(type='password' placeholder='Password' required='')
+  .checkbox.mb-3
+    label
+      input(type='checkbox' value='remember-me')
+      |  Remember me
+  button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in

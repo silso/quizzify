@@ -1,0 +1,89 @@
+extends ../src/layoutMain.pug
+
+block head
+  title social - Quizzify
+  link(rel='stylesheet' type='text/css' href='/css/takequiz.css')
+  
+block scripts
+  script(src='/js/takequiz.js')
+
+block content
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.justify-content-between
+        span.navbar-brand.mb-0.h1 GEO Quiz Example
+        .collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item.active
+                    a.nav-link(href='#')
+                        | By John Doe
+                        span.sr-only
+        form.form-inline
+            .btn-group.my-2.my-sm-0
+                button.btn.btn-secondary(type='button') Like
+                button.btn.btn-secondary(type='button') Share
+                button.btn.btn-secondary(type='button') Copy
+
+    .container-fluid
+        .row
+            img.col-md-4.offset-md-4(src='img/geography.jpeg' alt='Responsive image')
+    .container-fluid
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h3
+                        span#qid.label.label-warning 2
+                        |  THREE is CORRECT
+                .modal-body
+                    .col-xs-3.offset-xs-5
+                        #loadbar(style='display: none;')
+                            #rotateG_01.blockG
+                            #rotateG_02.blockG
+                            #rotateG_03.blockG
+                            #rotateG_04.blockG
+                            #rotateG_05.blockG
+                            #rotateG_06.blockG
+                            #rotateG_07.blockG
+                            #rotateG_08.blockG
+                    #quiz.quiz(data-toggle='buttons')
+                        label.element-animation1.btn.btn-lg.btn-primary.btn-block
+                            span.btn-label
+                                i.fa.fa-chevron-right.fa-3x
+                            input(type='radio' name='q_answer' value='1')
+                            | 1 One
+                        label.element-animation2.btn.btn-lg.btn-primary.btn-block
+                            span.btn-label
+                                i.fa.fa-chevron-right.fa-3x
+                            input(type='radio' name='q_answer' value='2')
+                            | 2 Two
+                        label.element-animation3.btn.btn-lg.btn-primary.btn-block
+                            span.btn-label
+                                i.fa.fa-chevron-right.fa-3x
+                            input(type='radio' name='q_answer' value='3')
+                            | 3 Three
+                        label.element-animation4.btn.btn-lg.btn-primary.btn-block
+                            span.btn-label
+                                i.fa.fa-chevron-right.fa-3x
+                            input(type='radio' name='q_answer' value='4')
+                            | 4 Four
+                .modal-footer.text-muted
+                    span#answer
+    .container-fluid
+        .row
+            .col
+                h2
+                    | Completion: 5/20
+            .col
+                h2
+                    | Score: 80% 4/5
+            .col
+                h2
+                    | Time: 12m20s
+        .row
+            .col
+                .progress(style='height: 20px;')
+                    .progress-bar(role='progressbar' style='width: 25%;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100') 25%
+            .col
+                .progress(style='height: 20px;')
+                    .progress-bar(role='progressbar' style='width: 80%;' aria-valuenow='80' aria-valuemin='0' aria-valuemax='100') 80%
+            .col
+                .progress(style='height: 20px;')
+                    .progress-bar(role='progressbar' style='width: 25%;' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100') 25%
