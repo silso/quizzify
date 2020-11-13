@@ -1,0 +1,44 @@
+extends ../src/layoutMain.pug
+
+block head
+  title Take quiz - Quizzify
+
+block scripts
+
+block content
+  .container
+    .jumbotron.pb-3.mb-3.mt-2
+      .row
+        .col
+          block quizTitle
+        .col.position-relative
+          .btn-group.position-absolute(role="group" display="inline" style="bottom: 0; right: 0; padding: inherit")
+            button.btn.btn-outline-secondary(type="button") Save
+            button.btn.btn-outline-secondary(type="button") Share
+            button.btn.btn-outline-secondary(type="button") Copy
+  .container
+    .row.mb-3
+      .col-sm-1
+      .col
+        block quizContent
+      .col-sm-1
+    .row
+      .col-sm-1
+      .col
+        .row.pl-3.pr-3
+          .col-4.p-3
+            h4.mb-3.font-weight-bold.text-center Completion: 
+              span.font-weight-normal 12/20
+            .progress
+              .progress-bar(role="progressbar" style="width: 60%" aria-valuenow="60")
+          .col-4.p-3
+            h4.mb-3.font-weight-bold.text-center Score: 
+              span.font-weight-normal 50% (6/12)
+            .progress
+              .progress-bar(role="progressbar" style="width: 50%" aria-valuenow="50")
+          .col-4.p-3
+            h4.mb-3.font-weight-bold.text-center Time: 
+              span.font-weight-normal 12m20s/15m00s
+            .progress
+              .progress-bar(role="progressbar" style="width: 82%" aria-valuenow="82")
+      .col-sm-1
