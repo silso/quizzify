@@ -1,1 +1,40 @@
-extends ../src/layoutMain.pug
+doctype html
+head
+  title Login - Quizzify
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  link(rel='shortcut icon' type='image/x-icon' href='pictures/quizzify_icon.png')
+
+  //bootstrap
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
+
+  script(src='https://kit.fontawesome.com/1e74007db0.js')
+
+  style.
+    .form-control{
+    text-align: center;
+    }
+
+  block head
+  link(rel='stylesheet' type='text/css' href='/css/style.css')
+
+
+.jumbotron(style='background: rgb(166, 166, 166) !important')
+    center
+        h1 Quizzify Login
+
+    p#errorindicator
+form
+    .row
+        .form-group.col-md-4.offset-md-4
+            label(for='GID') Enter your GID here:
+            input#GID.form-control(type='text' placeholder='Enter Username' required='')
+    .row
+        .form-group.col-md-4.offset-md-4
+            label(for='password') Enter Password here:
+            input#password.form-control(type='password' placeholder='Enter Password' required='')
+    .row
+        .form-group.col-md-4.offset-md-4
+            button.btn.btn-success.btn-block(type='button') Login
