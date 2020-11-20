@@ -1,6 +1,9 @@
 const presets = {
     'Flashcard': {
-        columns: [{colName: 'Word'}, {colName: 'Definition'}]
+        columns: [
+            {colName: 'Word'},
+            {colName: 'Definition'}
+        ]
     },
     'Multiple choice': {
         columns: [

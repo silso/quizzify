@@ -43,13 +43,16 @@ block content
         #spreadsheetContainer
           #quizDataSpreadsheet
 
+    //other stuff
     .row
       .col
         .custom-file
           input#coverImage.custom-file-input(type='file')
           label.custom-file-label(for='coverImage') Choose cover image...
       .col
-        button.btn.btn-secondary.float-right Import data
+        label.btn.btn-secondary.float-right
+          input(type='file' size='1' style='display:none;')
+          |Import data
           img.ml-2.align-baseline(src='/svg/upload.svg' style='filter: invert(1);')
 
 
