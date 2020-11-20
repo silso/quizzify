@@ -2,7 +2,7 @@
     padding: 10px 15px;
     border-radius: 20px;
 }
-input {
+label input {
     visibility:hidden;
 }
 label.btn {
