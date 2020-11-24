@@ -3,7 +3,8 @@
     border-radius: 20px;
 }
 label input {
-    visibility:hidden;
+    width: 0;
+    height: 0;
 }
 label.btn {
 padding: 18px 60px;

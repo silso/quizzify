@@ -20,8 +20,7 @@ block quizContent
             .modal-content
                 .modal-header
                     h3
-                        span#qid.label.label-warning 2
-                        |  THREE is CORRECT
+                        span#qid.label.label-warning
                 .modal-body
                     .col-xs-3.offset-xs-5
                         #loadbar(style='display: none;')
@@ -33,23 +32,23 @@ block quizContent
                             #rotateG_06.blockG
                             #rotateG_07.blockG
                             #rotateG_08.blockG
-                    #quiz.quiz(data-toggle='buttons')
-                        label.element-animation1.btn.btn-lg.btn-primary.btn-block
+                    form#quiz.quiz(data-toggle='buttons')
+                        label.btn.btn-lg.btn-primary.btn-block
                             span.btn-label
                                 i.fa.fa-chevron-right.fa-3x
                             input(type='radio' name='q_answer' value='1')
                             | 1 One
-                        label.element-animation2.btn.btn-lg.btn-primary.btn-block
+                        label.btn.btn-lg.btn-primary.btn-block
                             span.btn-label
                                 i.fa.fa-chevron-right.fa-3x
                             input(type='radio' name='q_answer' value='2')
                             | 2 Two
-                        label.element-animation3.btn.btn-lg.btn-primary.btn-block
+                        label.btn.btn-lg.btn-primary.btn-block
                             span.btn-label
                                 i.fa.fa-chevron-right.fa-3x
                             input(type='radio' name='q_answer' value='3')
                             | 3 Three
-                        label.element-animation4.btn.btn-lg.btn-primary.btn-block
+                        label.btn.btn-lg.btn-primary.btn-block
                             span.btn-label
                                 i.fa.fa-chevron-right.fa-3x
                             input(type='radio' name='q_answer' value='4')
