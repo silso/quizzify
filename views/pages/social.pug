@@ -2,5 +2,362 @@ extends ../src/layoutMain.pug
 
 block head
   title social - Quizzify
+  link(rel='stylesheet' type='text/css' href='/css/social.css')
 
 block content
+  .container
+    .row
+      .col-md-12
+        #content.content.content-full-width
+          // begin profile
+          .profile
+            .profile-header
+              // BEGIN profile-header-cover
+              .profile-header-cover
+              // END profile-header-cover
+              // BEGIN profile-header-content
+              .profile-header-content
+                // BEGIN profile-header-img
+                .profile-header-img
+                  img(src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="")
+                // END profile-header-img
+                // BEGIN profile-header-info
+                .profile-header-info
+                  h4.m-t-10.m-b-5 Jone Doe
+                  p.m-b-10 Member since 2020
+                  a.btn.btn-xs.btn-yellow(href="#") Edit Profile
+                // END profile-header-info
+              // END profile-header-content
+          // end profile
+          // begin profile-content
+          .profile-content
+            // begin tab-content
+            .tab-content.p-0
+              // begin #profile-friends tab
+              #profile-friends.tab-pane.fade.in.active.show
+                h4.m-t-0.m-b-20 Friend List (14)
+                // begin row
+                .row.row-space-2
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse James Pittman
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown" aria-expanded="false")
+                            ul.dropdown-menu.dropdown-menu-right(x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(101px, 34px, 0px);")
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Mitchell Ashcroft
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Ella Cabena
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            button#dropdownMenuButton.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                            .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                              a.dropdown-item(href='#') Action
+                              a.dropdown-item(href='#') Another action
+                              a.dropdown-item(href='#') Something else here
+
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Declan Dyson
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse George Seyler
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Patrick Musgrove
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Taj Connal
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Laura Pollock
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Dakota Mannix
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Timothy Woolley
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Benjamin Congreve
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Mariam Maddock
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Blake Gerrald
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                  // begin col-6
+                  // end col-6
+                  // begin col-6
+                  .col-md-6.m-b-2
+                    .p-10.bg-white
+                      .media.media-xs.overflow-visible
+                        a.media-left(href="javascript:;")
+                          img.media-object.img-circle(src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="")
+                        .media-body.valign-middle
+                          b.text-inverse Gabrielle Bunton
+                        .media-body.valign-middle.text-right.overflow-visible
+                          .btn-group.dropdown
+                            a.btn.btn-default(href="javascript:;") Friends
+                            a.btn.btn-default.dropdown-toggle(href="javascript:;" data-toggle="dropdown")
+                            ul.dropdown-menu.dropdown-menu-right
+                              li
+                                a(href="javascript:;") Action 1
+                              li
+                                a(href="javascript:;") Action 2
+                              li
+                                a(href="javascript:;") Action 3
+                              li.divider
+                              li
+                                a(href="javascript:;") Action 4
+                  // end col-6
+                // end row
+              // end #profile-friends tab
+            // end tab-content
+          // end profile-content

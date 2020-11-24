@@ -9,6 +9,8 @@ block content
   .container
     .jumbotron.pb-3.mb-3.mt-2
       .row
+        .col-sm-auto
+          block quizImg
         .col
           block quizTitle
         .col.position-relative
@@ -28,17 +30,17 @@ block content
         .row.pl-3.pr-3
           .col-4.p-3
             h4.mb-3.font-weight-bold.text-center Completion: 
-              span.font-weight-normal 12/20
+              span.font-weight-normal#completiontext 0/5
             .progress
-              .progress-bar(role="progressbar" style="width: 60%" aria-valuenow="60")
+              .progress-bar#completion(role="progressbar" style="width: 00%" aria-valuenow="00")
           .col-4.p-3
             h4.mb-3.font-weight-bold.text-center Score: 
-              span.font-weight-normal 50% (6/12)
+              span.font-weight-normal#scoretext 0% (0/5)
             .progress
-              .progress-bar(role="progressbar" style="width: 50%" aria-valuenow="50")
+              .progress-bar#score(role="progressbar" style="width: 00%" aria-valuenow="00")
           .col-4.p-3
-            h4.mb-3.font-weight-bold.text-center Time: 
-              span.font-weight-normal 12m20s/15m00s
-            .progress
-              .progress-bar(role="progressbar" style="width: 82%" aria-valuenow="82")
+            h4.mb-3.font-weight-bold.text-center Time left: 
+              span.font-weight-normal#timertext 5m 00s
+            .progress.justify-content-end
+              .progress-bar#timer(role="progressbar" style="width: 00%;display: block" aria-valuenow="00")
       .col-sm-1
