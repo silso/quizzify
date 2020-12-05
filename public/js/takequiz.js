@@ -1,39 +1,3 @@
-var quiz = {
-    data: [
-        {
-            "Question": "What country has the highest population density?",
-            "Correct answer": "monaco",
-            "Wrong answer 1": "peru",
-            "Wrong answer 2": "dominican republic",
-            "Wrong answer 3": "england"
-        }, {
-            "Question": "What country is the island of Sicily part of?",
-            "Correct answer": "italy",
-            "Wrong answer 1": "uruguay",
-            "Wrong answer 2": "czechoslovakia",
-            "Wrong answer 3": "persia"
-        }, {
-            "Question": "In which country was the Rosetta stone found?",
-            "Correct answer": "egypt",
-            "Wrong answer 1": "belarus",
-            "Wrong answer 2": "nauru",
-            "Wrong answer 3": "ireland"
-        }, {
-            "Question": "Marco Polo travelled to the Tatar Empire, what is it now called?",
-            "Correct answer": "china",
-            "Wrong answer 1": "montenegro",
-            "Wrong answer 2": "french polynesia",
-            "Wrong answer 3": "uruguay"
-        }, {
-            "Question": "Paper money was first used in?",
-            "Correct answer": "china",
-            "Wrong answer 1": "algeria",
-            "Wrong answer 2": "philippines",
-            "Wrong answer 3": "south africa"
-        }
-    ]
-};
-
 //from stackoverflow
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -124,7 +88,12 @@ $(function(){
         $( "#scoretext" ).html(`${score}/${qCount}`);
         $( "#score" ).attr({"style":`width: ${score/qCount*100}%;`,"aria-valuenow":String(score/qCount*100),"aria-valuemin":"0","aria-valuemax":"100"});
         $( "#completion" ).attr({"style":`width: ${completion/qCount*100}%;`,"aria-valuenow":String(completion/qCount*100),"aria-valuemin":"0","aria-valuemax":"100"});
-        return (choice === 'Correct answer') ? 'CORRECT' : 'INCORRECT';
+        if (choice === 'Correct answer') {
+            return 'CORRECT';
+        }
+        else {
+            return `INCORRECT, correct answer was "${quiz.data[completion - 1]['Correct answer']}"`;
+        }
     };
 
     askQuestion(0);
