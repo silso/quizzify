@@ -6,16 +6,12 @@ const port = process.env.PORT || 3000;;
 // app.set('views', './views');
 // app.set('view engine', 'pug');
 
-app.use(express.static('build'));
-app.use(express.static('public'));
-
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/build/login.html');
 });
 
-app.get('/login', function(req, res) {
-  res.sendFile(__dirname + '/build/login.html');
-});
+app.use(express.static('build'));
+app.use(express.static('public'));
 
 app.get('/social', function(req, res) {
   res.sendFile(__dirname + '/build/social.html');
