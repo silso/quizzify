@@ -2,6 +2,11 @@ extends ../src/layoutMain.pug
 
 block head
   title Profile - Quizzify
+  link(rel='stylesheet' type='text/css' href='/css/style.css')
+
+block scripts
+  script(src='/js/profile.js')
+  
 
 block content
   .container-fluid
@@ -16,15 +21,46 @@ block content
                 td 
                   img(src='img/catprof.jpg' class="center" alt='Card image cap')
           
-            p(style='text-align: center') Name: Frankie Jardio
-            p(style='text-align: center') Home: St Paul, Minnesota
-            p(style='text-align: center') Education: Computer Engineering at University of Minnesota - Twin Cities
-            p(style='text-align: center') Birthday: May 13, 2003
-            p(style='text-align: center') Profession: Unemployed
+            p(id = "name1" style='text-align: center') Name: Frankie Jardio
+            p(id = "home1" style='text-align: center') Home: St Paul, Minnesota
+            p(id = "education1" style='text-align: center') Education: Computer Engineering at University of Minnesota - Twin Cities
+            p(id = "birthday1" style='text-align: center') Birthday: May 13, 2003
+            p(id = "profession1" style='text-align: center') Profession: Unemployed
 
             h6.card-title.text(style = 'text-decoration: underline') Bio
-            p(style = 'font-style: italic') I like good scratches, meat, cleaning, and annoying my family! Also I really don't like my sister Hima because she is so sensitive.
-            button(style='float: right') Edit
+            p(id = "bio1" style = 'font-style: italic') I like good scratches, meat, cleaning, and annoying my family! Also I really don't like my sister Hima because she is so sensitive.
+            button#searchbtn.btn.btn-outline-success.my-2.my-sm-0(type='button' onclick='openForm()' style = 'float: right') Edit
+            <div class="form-popup" id="myForm">
+              <form action="/action_page.php" class="form-container">
+
+              <h1 style = 'text-decoration: underline'> Edit Profile Information </h1>
+                <label for="name" ><b>Name:</b></label>
+                <input type="text" id="name" placeholder="Enter Name" name="name" required> 
+                p()
+
+                <label for="Home"><b>Home:</b></label>
+                <input type="text" id="home" placeholder="Enter Home" name="Home"  required>
+                p()
+
+                <label for="Education"><b>Education:</b></label>
+                <input type="text" id="education" placeholder="Enter Education" name="Education"   required>
+                p()
+
+                <label for="Birthday"><b>Birthday:</b></label>
+                <input type="text" id="birthday" placeholder="Enter Birthday" name="Birthday"   required>
+                p()
+
+                <label for="Profession"><b>Profession:</b></label>
+                <input type="text" id="profession" placeholder="Enter Profession" name="Profession"  required>
+                p()
+
+                <label for="Bio"><b>Bio:</b></label>
+                <input type="text" id="bio" placeholder="Enter Bio" name="Bio" required>
+
+                button#searchbtn.btn.btn-outline-success.my-2.my-sm-0(type='button' onclick='closeForm()' style = 'float: right') Close
+                button#searchbtn.btn.btn-outline-success.my-2.my-sm-0(type='button' onclick='submitForm()' style = 'float: right') Submit
+              </form>
+            </div>
 
       .col-sm-4.col-lg-6.d-md-block.p-3#activitypanel
         .card.bg-light.mb-3
@@ -76,4 +112,3 @@ block content
 
             
           
-      
