@@ -10,7 +10,7 @@ app.use(express.static('build'));
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/build/index.html');
+  res.sendFile(__dirname + '/build/login.html');
 });
 
 app.get('/login', function(req, res) {
