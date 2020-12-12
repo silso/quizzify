@@ -13,12 +13,8 @@ app.get('/', function(req, res) {
 app.use(express.static('build'));
 app.use(express.static('public'));
 
-app.get('/social', function(req, res) {
-  res.sendFile(__dirname + '/build/social.html');
-});
-
-app.get('/takequiz', function(req, res) {
-  res.sendFile(__dirname + '/build/takequiz.html');
+app.get('*', function(req, res) {
+  res.sendFile(__dirname + '/build/404.html');
 });
 
 app.listen(port, () => console.log(`Quizzify listening on port ${port}!`));
